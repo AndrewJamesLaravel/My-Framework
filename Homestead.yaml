@@ -1,0 +1,22 @@
+ip: 192.168.10.10
+memory: 2048
+cpus: 1
+provider: virtualbox
+mariadb: true
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+folders:
+    -
+        map: /home/andrew/www/vagrant_projects/bp
+        to: /home/vagrant/bp
+sites:
+    -
+        map: bp.test
+        to: /home/vagrant/bp/webroot
+        type: "apache"
+
+databases:
+    - bp_db
+name: bp
+hostname: bp
